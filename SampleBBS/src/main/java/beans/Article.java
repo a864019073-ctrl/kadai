@@ -11,7 +11,7 @@ public class Article implements Serializable{ //implements Serializableが必要
 	private String editorId; //著者のユーザId
 	private Timestamp entryDatetime; //登録日時
 	private int likeCount;//いいねのカウント
-
+	
 	//カラのコンストラクタが必要
 	public Article() {
 	}
