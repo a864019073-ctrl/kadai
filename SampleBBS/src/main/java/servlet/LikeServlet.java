@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import beans.User;
-import dao.ArticleDAO;
+import dao.Dao;
 
 @WebServlet("/LikeServlet")
 public class LikeServlet extends HttpServlet {
@@ -35,7 +35,7 @@ public class LikeServlet extends HttpServlet {
         String userId = user.getId();
 
         // 3. DAOを呼び出して「いいね」を登録
-        ArticleDAO dao = new ArticleDAO();
+        Dao dao = new Dao();
         dao.toggleLike(articleId, userId);
 
         // 4. 記事一覧画面（Servlet）にリダイレクトして戻る
