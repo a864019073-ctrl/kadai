@@ -10,6 +10,7 @@ public class Article implements Serializable{ //implements Serializableが必要
 	private String body; //本文
 	private String editorId; //著者のユーザId
 	private Timestamp entryDatetime; //登録日時
+	private int likeCount;//いいねのカウント
 
 	//カラのコンストラクタが必要
 	public Article() {
@@ -67,6 +68,14 @@ public class Article implements Serializable{ //implements Serializableが必要
 
 	public void setEntryDatetime(Timestamp entryDatetime) {
 		this.entryDatetime = entryDatetime;
+	}
+
+	public int getLikeCount() {
+		return likeCount;
+	}
+
+	public void setLikeCount(int likeCount) {
+		this.likeCount = likeCount;
 	}
 
 }
