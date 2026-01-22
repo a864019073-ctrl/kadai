@@ -27,7 +27,7 @@
 		
 		<div class="like-section">
 		    <a href="LikeServlet?articleId=<%=a.getId()%>" style="text-decoration: none;">
-		        <span>♥ いいね！</span>
+		        <span>♥ いいね！ (<%=a.getLikeCount()%>)</span>
 		    </a>
 		</div>
 		<br>

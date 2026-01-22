@@ -44,6 +44,7 @@ public class LoginServlet extends HttpServlet {
 		if(user != null && user.getPassword().equals(password)) {
 			//Sessionオブジェクトを取得し，userIdという名前でidを格納．このセッションが生きている限り，いつでもuserIdを取り出せるようになる．
 			request.getSession().setAttribute("userId" , id);
+			request.getSession().setAttribute("user" , user);
 			RequestDispatcher dispatcher = request.getRequestDispatcher("./ArticleListServlet");
 			dispatcher.forward(request, response);
 		}

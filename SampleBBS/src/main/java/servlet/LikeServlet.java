@@ -23,7 +23,7 @@ public class LikeServlet extends HttpServlet {
 
         // ログインしていない場合はログイン画面へ
         if (user == null) {
-            response.sendRedirect("LoginServlet");
+            response.sendRedirect("LoginPageServlet");
             return;
         }
 
@@ -31,7 +31,7 @@ public class LikeServlet extends HttpServlet {
         String articleIdStr = request.getParameter("articleId");
         int articleId = Integer.parseInt(articleIdStr);
         
-        // ★修正ポイント：User.javaに合わせてString型で受け取る
+        // User.javaに合わせてString型で受け取る
         String userId = user.getId();
 
         // 3. DAOを呼び出して「いいね」を登録
